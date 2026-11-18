@@ -224,6 +224,21 @@ a{color:inherit;text-decoration:none}
 
 .foot{margin:22px 0 0;padding:0 6px 22px;font-size:11px;line-height:1.8;color:var(--ink-3);text-align:center}
 
+/* 微信内提示条 */
+.wxtip{margin:0 0 10px}
+.wxtip__in{
+  display:flex;align-items:flex-start;gap:9px;
+  background:rgba(255,176,60,.12);
+  border:1px solid rgba(255,176,60,.32);
+  border-radius:14px;padding:11px 12px;
+  font-size:12px;line-height:1.6;color:#FFC98A;
+}
+.wxtip__t{flex:1;min-width:0}
+.wxtip__x{
+  flex:0 0 auto;background:none;border:0;color:#FFC98A;
+  font-size:16px;line-height:1;padding:0 2px;cursor:pointer;opacity:.7;
+}
+
 /* 宽屏（电脑）自动放宽，手机不受影响 */
 @media (min-width:740px){
   .page{max-width:700px;padding:18px 18px 0}
@@ -263,12 +278,18 @@ a{color:inherit;text-decoration:none}
 <body>
 
 <main class="page">
+  <div class="wxtip" id="wxtip" hidden>
+    <div class="wxtip__in">
+      <span class="wxtip__t">微信里不能直接拨号和跳转地图。点右上角 <b>···</b> → <b>在浏览器打开</b>，就能一键拨号、导航。</span>
+      <button class="wxtip__x" id="wxtipX" type="button" aria-label="关闭">×</button>
+    </div>
+  </div>
   <div id="app"></div>
 </main>
 
 <div class="bar">
-  <a class="btn btn--primary" href="tel:13133565318">打电话</a>
-  <a class="btn btn--nav" href="https://uri.amap.com/search?keyword=%E5%BD%A9%E9%BE%99%E5%BB%BA%E6%9D%90%E5%9F%8E&city=%E7%A7%A6%E7%9A%87%E5%B2%9B&view=map&callnative=1" target="_blank" rel="noopener">导航</a>
+  <a class="btn btn--primary" href="tel:13133565318" id="barCall">打电话</a>
+  <a class="btn btn--nav" href="https://uri.amap.com/search?keyword=%E5%BD%A9%E9%BE%99%E5%BB%BA%E6%9D%90%E5%9F%8E&city=%E7%A7%A6%E7%9A%87%E5%B2%9B&view=map&callnative=1" target="_blank" rel="noopener" id="barNav">导航</a>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -553,6 +574,32 @@ function bindCopy() {
       copy(this.getAttribute('data-copy'), this.getAttribute('data-msg') || '已复制');
     };
   }
+}
+
+/* ---------- 微信内降级：拨号和外跳被微信拦截，改为复制 ---------- */
+var IS_WECHAT = /MicroMessenger/i.test(navigator.userAgent);
+
+if (IS_WECHAT) {
+  var tip = document.getElementById('wxtip');
+  tip.hidden = false;
+  document.getElementById('wxtipX').onclick = function () { tip.hidden = true; };
+
+  document.addEventListener('click', function (e) {
+    var el = e.target;
+    while (el && el.tagName !== 'A') el = el.parentNode;
+    if (!el || el.tagName !== 'A') return;
+
+    var href = el.getAttribute('href') || '';
+    if (/^tel:/.test(href)) {
+      e.preventDefault();
+      copy(href.replace(/^tel:/, ''), '号码已复制，去拨号盘粘贴就能打');
+      return;
+    }
+    if (el.id === 'barNav' || href.indexOf('uri.amap.com') > -1) {
+      e.preventDefault();
+      copy(STORE.addrFull, '地址已复制，打开高德粘贴搜索');
+    }
+  }, true);
 }
 
 window.addEventListener('hashchange', render);

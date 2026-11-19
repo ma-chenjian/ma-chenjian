@@ -380,7 +380,7 @@ function railHTML(active) {
 }
 
 function itemHTML(p) {
-  var img = p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy">' : ICON;
+  var img = p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '">' : ICON;
   var sub = [p.model, p.brand].filter(Boolean).join(' · ');
   return '<a class="item" href="#/item/' + p.id + '">' +
     '<div class="item__img' + (p.fit === 'contain' ? ' item__img--fit' : '') + '">' + img + '</div>' +
@@ -434,7 +434,7 @@ function aboutView() {
 function detailView(id) {
   var p = byId(id);
   if (!p) return listView('all');
-  var img = p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy">' : ICON_BIG;
+  var img = p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '">' : ICON_BIG;
 
   return '<div class="topbar"><a class="back" href="#/' + p.cat + '"><i>‹</i>' + esc(catName(p.cat)) + '</a></div>' +
     '<div class="detail">' +

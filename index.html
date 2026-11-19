@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="format-detection" content="telephone=no">
-<meta name="theme-color" content="#08080A">
+<meta name="theme-color" content="#F2F6FA">
 <title>海尔智能卫浴｜秦皇岛彩龙建材城 AF1-156</title>
 <meta name="description" content="秦皇岛海港区彩龙建材城 AF1-156。座便器、蹲便器、小便器、台下盆、墩布池、龙头五金，到店看实物。">
 <meta property="og:type" content="website">
@@ -15,172 +15,212 @@
   --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
   --serif:"Songti SC","STSong","SimSun","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
-  --ink:#EDE9E1;
-  --ink-2:#A8A29A;
-  --ink-3:#6E6862;
-  --gold:#C9A96A;
-  --gold-2:#E0C48A;
-  --line:rgba(237,233,225,.10);
-  --line-2:rgba(237,233,225,.16);
+  --bg:#F2F6FA;
+  --card:#FFFFFF;
+  --ink:#131A24;
+  --ink-2:#5A6675;
+  --ink-3:#94A1B2;
+  --line:#E2E9F2;
+  --line-2:#D3DEEB;
+  --blue:#1E7FD6;
+  --blue-2:#3B95E8;
+  --blue-soft:#E6F2FD;
+  --price:#D97706;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0;padding:0 0 32px;
+  margin:0;padding:0 0 96px;
   color:var(--ink);
   font-family:var(--sans);font-size:15px;line-height:1.8;
   display:flex;flex-direction:column;align-items:center;
   min-height:100vh;-webkit-font-smoothing:antialiased;
-  background:#08080A;
+  background:var(--bg);
   background-image:
-    radial-gradient(900px 520px at 50% -10%,rgba(201,169,106,.10) 0%,rgba(201,169,106,0) 62%),
-    radial-gradient(700px 500px at 100% 40%,rgba(70,90,120,.10) 0%,rgba(70,90,120,0) 62%),
-    linear-gradient(180deg,#08080A 0%,#0A0A0D 60%,#070708 100%);
+    radial-gradient(760px 380px at 50% -6%,rgba(10,102,179,.10) 0%,rgba(10,102,179,0) 66%),
+    linear-gradient(180deg,#EFF5FB 0%,#F4F7FA 40%,#F2F6FA 100%);
   background-attachment:fixed;
 }
-body::after{
-  content:"";position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.05;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
-}
-.page{width:100%;max-width:540px;padding:22px 16px 0}
+.page{width:100%;max-width:540px;padding:16px 14px 0}
 p{margin:0}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
-::selection{background:rgba(201,169,106,.28)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+::selection{background:rgba(10,102,179,.16)}
 
 /* 首屏 */
-.hero{position:relative;padding:6px 2px 22px;border-bottom:1px solid var(--line);margin-bottom:20px}
-.hero__eyebrow{margin:0 0 16px;font-size:10px;letter-spacing:.34em;color:var(--ink-3);text-transform:uppercase}
-.hero__title{margin:0 0 10px;font-family:var(--serif);font-size:31px;line-height:1.3;font-weight:600;letter-spacing:.06em;color:#F5F1E8}
-.hero__sub{margin:0 0 20px;font-size:12px;letter-spacing:.24em;color:var(--gold);font-weight:500}
-.hero__meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11.5px;letter-spacing:.12em;color:var(--ink-2)}
-.hero__meta .num{font-family:var(--mono);letter-spacing:.06em}
-.hero__meta i{font-style:normal;color:var(--ink-3)}
-.hero__meta .st{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.18em;color:var(--gold)}
-.st .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
-.st.is-closed .dot{background:#8A7A5E;box-shadow:none}
-.st.is-closed{color:var(--ink-3)}
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);border-radius:20px;
+  padding:22px 20px 18px;
+  box-shadow:0 12px 28px -24px rgba(19,26,36,.55);
+}
+.hero::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--blue) 0%,#57A9E4 100%);
+}
+.hero__eyebrow{margin:0 0 12px;font-size:10px;letter-spacing:.32em;color:var(--blue);text-transform:uppercase;font-weight:600}
+.hero__title{margin:0 0 8px;font-family:var(--serif);font-size:30px;line-height:1.3;font-weight:700;letter-spacing:.05em;color:var(--ink)}
+.hero__sub{margin:0 0 16px;font-size:12px;letter-spacing:.18em;color:var(--ink-2)}
+.hero__meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
+.hero__meta .num{font-family:var(--mono);color:var(--blue);font-weight:600}
+.hero__meta i{font-style:normal;color:var(--line-2)}
+.hero__meta .st{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.1em;color:var(--blue);background:var(--blue-soft);padding:5px 10px;border-radius:999px}
+.st .dot{width:5px;height:5px;border-radius:50%;background:#10B981;box-shadow:0 0 0 3px rgba(16,185,129,.16)}
+.st.is-closed{color:var(--ink-3);background:#EEF1F5}
+.st.is-closed .dot{background:#B6C0CC;box-shadow:none}
 
 /* 左栏 */
-.shell{display:flex;gap:18px;align-items:flex-start}
-.rail{flex:0 0 76px;width:76px;position:sticky;top:14px;padding:2px 0 0;border-right:1px solid var(--line);max-height:calc(100vh - 40px);overflow-y:auto;scrollbar-width:none}
+.shell{display:flex;gap:14px;align-items:flex-start;margin-top:14px}
+.rail{
+  flex:0 0 82px;width:82px;position:sticky;top:12px;
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:6px 0;
+  max-height:calc(100vh - 40px);overflow-y:auto;scrollbar-width:none;
+  box-shadow:0 10px 24px -24px rgba(19,26,36,.6);
+}
 .rail::-webkit-scrollbar{display:none}
-.rail__g{font-size:9px;letter-spacing:.22em;color:var(--ink-3);padding:16px 0 7px 14px}
-.rail a{position:relative;display:block;padding:9px 0 9px 14px;font-size:12.5px;line-height:1.4;letter-spacing:.04em;color:var(--ink-2);transition:color .18s ease}
-.rail a.on{color:var(--gold-2);font-weight:600}
-.rail a.on::before{content:"";position:absolute;left:-1px;top:50%;transform:translateY(-50%);width:1px;height:15px;background:var(--gold);box-shadow:0 0 10px rgba(201,169,106,.8)}
-.rail a:active{color:var(--ink)}
+.rail__g{font-size:9px;letter-spacing:.16em;color:var(--ink-3);padding:12px 0 4px 13px}
+.rail a{position:relative;display:block;padding:9px 0 9px 13px;font-size:12.5px;line-height:1.4;color:var(--ink-2);transition:color .16s ease,background .16s ease}
 .rail .cnt{font-size:10px;color:var(--ink-3);margin-left:3px;font-family:var(--mono)}
+.rail a.on{color:var(--blue);font-weight:700;background:var(--blue-soft)}
+.rail a.on .cnt{color:var(--blue);opacity:.7}
+.rail a.on::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:16px;border-radius:0 3px 3px 0;background:var(--blue)}
+.rail a:active{background:#F4F7FA}
 .pane{flex:1;min-width:0}
 
 /* 标题 */
-.panehead{margin:0 0 4px}
-.panehead h2{margin:0;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.1em}
-.panehead .cnt2{display:block;margin-top:6px;font-size:10px;letter-spacing:.2em;color:var(--ink-3)}
-.hint{font-size:11.5px;line-height:1.7;color:var(--ink-3);letter-spacing:.02em}
+.panehead{margin:0 0 4px;padding:0 2px}
+.panehead h2{margin:0;font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+.panehead .cnt2{display:block;margin-top:5px;font-size:11px;letter-spacing:.04em;color:var(--ink-3)}
+.hint{font-size:11.5px;line-height:1.7;color:var(--ink-3)}
 
 /* 产品 */
-.items{display:grid;grid-template-columns:1fr;gap:22px}
-.items--single{max-width:420px}
-.item{display:block;position:relative}
-.item__img{
-  position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
-  background:linear-gradient(150deg,#15151A 0%,#0B0B0E 52%,#101014 100%);
-  border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(201,169,106,.55);transition:border-color .25s ease;
+.items{display:grid;grid-template-columns:1fr;gap:14px}
+.items--single{max-width:400px}
+.item{
+  display:block;background:var(--card);
+  border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:0 10px 24px -22px rgba(19,26,36,.6);
+  transition:transform .15s ease,box-shadow .15s ease;
 }
-.item__img::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%,rgba(201,169,106,.07),transparent 60%);pointer-events:none}
-.item__img img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(.96)}
-.item:active .item__img{border-color:rgba(201,169,106,.45)}
-.item__b{padding:13px 2px 0}
-.item__name{margin:0 0 5px;font-size:15px;font-weight:600;letter-spacing:.04em;line-height:1.45}
-.item__model{margin:0 0 6px;font-size:10.5px;letter-spacing:.14em;color:var(--ink-3);font-family:var(--mono)}
-.item__price{font-family:var(--mono);font-size:14px;letter-spacing:.04em;color:var(--gold)}
-.item__price small{font-size:10px;letter-spacing:.1em;color:var(--ink-3);margin-left:4px;font-family:var(--sans)}
-.item__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.item__tags span{font-size:10px;letter-spacing:.06em;color:var(--ink-3);border:1px solid var(--line);border-radius:2px;padding:2px 7px}
+.item:active{transform:scale(.986);box-shadow:0 6px 16px -14px rgba(19,26,36,.6)}
+.item__img{
+  position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;
+  background:#F5F8FC;
+  display:flex;align-items:center;justify-content:center;
+  color:#B9C6D6;
+}
+.item__img img{width:100%;height:100%;object-fit:cover;display:block}
+.item__img--fit img{object-fit:contain}
+.item__b{padding:12px 13px 14px}
+.item__name{margin:0 0 4px;font-size:15px;font-weight:700;letter-spacing:.02em;line-height:1.45;color:var(--ink)}
+.item__model{margin:0 0 8px;font-size:10.5px;letter-spacing:.06em;color:var(--ink-3);font-family:var(--mono)}
+.item__price{font-family:var(--mono);font-size:14px;color:var(--price);margin-bottom:8px}
+.item__price small{font-size:10px;color:var(--ink-3);margin-left:3px}
+.item__tags{display:flex;flex-wrap:wrap;gap:5px}
+.item__tags span{font-size:10.5px;letter-spacing:.02em;color:var(--blue);background:var(--blue-soft);border-radius:6px;padding:3px 8px}
 
 /* 返回 */
-.topbar{display:flex;align-items:center;gap:12px;padding:2px 0 20px}
-.back{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.18em;color:var(--ink-3)}
-.back i{font-style:normal;font-size:13px}
+.topbar{display:flex;align-items:center;gap:12px;padding:2px 0 14px}
+.back{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.back i{font-style:normal;font-size:14px;line-height:1}
 
 /* 详情 */
-.detail__img{
-  position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
-  background:linear-gradient(150deg,#15151A 0%,#0B0B0E 52%,#101014 100%);
-  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:rgba(201,169,106,.55);
-}
-.detail__img img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(.96)}
-.detail__img::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%,rgba(201,169,106,.08),transparent 62%);pointer-events:none}
-.detail__b{padding:22px 2px 0}
-.detail__name{margin:0 0 8px;font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.06em;line-height:1.35}
-.detail__model{font-size:10.5px;letter-spacing:.18em;color:var(--ink-3);font-family:var(--mono);margin-bottom:14px}
-.detail__price{font-family:var(--mono);font-size:20px;letter-spacing:.04em;color:var(--gold)}
-.detail__note{font-size:10.5px;letter-spacing:.1em;color:var(--ink-3);margin:6px 0 22px}
-.specs{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid var(--line)}
-.specs li{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13.5px;letter-spacing:.04em;color:var(--ink-2)}
-.specs .chk{color:var(--gold);font-size:10px;line-height:1.9;letter-spacing:0}
+.detail{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px -26px rgba(19,26,36,.6)}
+.detail__img{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:#F5F8FC;display:flex;align-items:center;justify-content:center;color:#B9C6D6}
+.detail__img img{width:100%;height:100%;object-fit:cover;display:block}
+.detail__img--fit img{object-fit:contain}
+.detail__b{padding:20px 18px 22px}
+.detail__name{margin:0 0 6px;font-family:var(--serif);font-size:23px;font-weight:700;letter-spacing:.04em;line-height:1.35;color:var(--ink)}
+.detail__model{font-size:10.5px;letter-spacing:.1em;color:var(--ink-3);font-family:var(--mono);margin-bottom:10px}
+.detail__price{font-family:var(--mono);font-size:20px;color:var(--price);margin-bottom:4px}
+.detail__note{font-size:11.5px;color:var(--ink-3);margin:0 0 18px}
+.specs{list-style:none;margin:0 0 20px;padding:0;border-top:1px solid var(--line)}
+.specs li{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.specs .chk{color:var(--blue);font-size:11px;line-height:1.9}
 
 /* 按钮 */
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:50px;padding:0 18px;border-radius:2px;border:1px solid var(--gold);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--gold-2);background:transparent;cursor:pointer;transition:background .2s ease}
-.btn:active{background:rgba(201,169,106,.12)}
-.btn--line{border-color:var(--line-2);color:var(--ink-2);letter-spacing:.16em}
-.btn--sm{width:auto;min-height:34px;padding:0 12px;font-size:11px;letter-spacing:.14em;font-weight:600;border:1px solid rgba(201,169,106,.4);color:var(--gold);border-radius:2px;background:transparent;flex:0 0 auto}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;min-height:50px;padding:0 18px;
+  border-radius:12px;border:1px solid var(--blue);
+  font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.06em;
+  color:#fff;background:var(--blue);cursor:pointer;
+  transition:transform .12s ease,opacity .12s ease;
+}
+.btn:active{transform:scale(.986);opacity:.92}
+.btn--line{border-color:var(--line-2);color:var(--ink-2);background:var(--card);letter-spacing:.04em}
+.btn--sm{width:auto;min-height:34px;padding:0 12px;font-size:12px;letter-spacing:.02em;border:1px solid var(--line-2);color:var(--blue);background:var(--blue-soft);border-radius:9px;flex:0 0 auto}
 
 /* 到店 */
-.card{border-top:1px solid var(--line)}
-.row{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2px 16px;box-shadow:0 10px 24px -24px rgba(19,26,36,.6)}
+.row{display:flex;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
 .row__b{flex:1;min-width:0}
-.row__k{font-size:10px;letter-spacing:.2em;color:var(--ink-3);margin-bottom:5px}
-.row__v{font-size:14px;line-height:1.65;letter-spacing:.03em}
-.row__v.num{font-family:var(--mono);letter-spacing:.08em;user-select:all}
+.row__k{font-size:10.5px;letter-spacing:.06em;color:var(--ink-3);margin-bottom:3px}
+.row__v{font-size:14.5px;line-height:1.6;color:var(--ink)}
+.row__v.num{font-family:var(--mono);letter-spacing:.03em;user-select:all}
 
 /* 提示 */
 .toast{
-  position:fixed;left:50%;top:24px;z-index:1000;transform:translate(-50%,-180%);
-  background:rgba(20,20,24,.96);color:var(--gold-2);border:1px solid rgba(201,169,106,.35);
-  font-size:12px;letter-spacing:.08em;line-height:1.5;padding:12px 20px;border-radius:2px;
-  max-width:min(86vw,420px);text-align:center;transition:transform .3s cubic-bezier(.2,.9,.3,1);
-  box-shadow:0 20px 50px -20px rgba(0,0,0,.9);
+  position:fixed;left:50%;top:22px;z-index:1000;transform:translate(-50%,-180%);
+  background:rgba(19,26,36,.94);color:#fff;
+  font-size:13px;line-height:1.5;padding:11px 18px;border-radius:12px;
+  max-width:min(86vw,420px);text-align:center;
+  transition:transform .28s cubic-bezier(.2,.9,.3,1);
+  box-shadow:0 16px 36px -18px rgba(0,0,0,.6);
 }
 .toast.show{transform:translate(-50%,0)}
 
-@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.hero,.item,.detail,.panehead{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
-.item:nth-child(2){animation-delay:.06s}
-.item:nth-child(3){animation-delay:.12s}
-.item:nth-child(4){animation-delay:.18s}
-.item:nth-child(5){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero,.item,.detail,.panehead{animation:rise .55s cubic-bezier(.2,.7,.3,1) both}
+.item:nth-child(2){animation-delay:.05s}
+.item:nth-child(3){animation-delay:.1s}
+.item:nth-child(4){animation-delay:.15s}
+.item:nth-child(5){animation-delay:.2s}
 @media (prefers-reduced-motion:reduce){
   .hero,.item,.detail,.panehead{animation:none}
-  .toast,.btn,.item__img{transition:none}
+  .toast,.btn,.item{transition:none}
 }
 
-.foot{margin:34px 0 0;padding:18px 0 8px;border-top:1px solid var(--line);font-size:10px;line-height:2;letter-spacing:.16em;color:var(--ink-3);text-align:center}
+.foot{margin:26px 0 0;padding:14px 0 8px;border-top:1px solid var(--line);font-size:11px;line-height:1.9;color:var(--ink-3);text-align:center}
+
+/* 底部微信条 */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  display:flex;justify-content:center;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:linear-gradient(to top,rgba(242,246,250,.97) 48%,rgba(242,246,250,0));
+  pointer-events:none;
+}
+.bar__in{width:100%;max-width:540px;pointer-events:auto}
+.bar .btn{min-height:52px;font-size:15px;letter-spacing:.04em;box-shadow:0 14px 28px -16px rgba(30,127,214,.85)}
+.btn--wx{background:linear-gradient(135deg,#1E7FD6,#3B95E8);border-color:transparent}
 
 @media (min-width:740px){
-  .page{max-width:720px;padding:30px 26px 0}
+  .page{max-width:720px;padding:24px 20px 0}
   .rail{flex:0 0 104px;width:104px}
-  .rail a{font-size:13.5px;padding:11px 0 11px 16px}
-  .rail__g{font-size:9.5px;padding:18px 0 8px 16px}
-  .hero__title{font-size:36px}
-  .items{grid-template-columns:1fr 1fr;gap:26px}
+  .rail a{font-size:13px;padding:10px 0 10px 15px}
+  .rail__g{font-size:9.5px;padding:14px 0 5px 15px}
+  .hero__title{font-size:34px}
+  .items{grid-template-columns:1fr 1fr;gap:16px}
   .item__name{font-size:15.5px}
   .panehead h2{font-size:21px}
-  .detail{max-width:640px;margin:0 auto}
-  .detail__img{aspect-ratio:16/10}
-  .topbar{max-width:640px;margin:0 auto}
+  .detail{max-width:460px;margin:0 auto}
+  .topbar{max-width:460px;margin:0 auto}
+  .bar__in{max-width:720px}
 }
 @media (min-width:1000px){
   .page{max-width:980px}
-  .items{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
-  .detail__name{font-size:28px}
+  .items{grid-template-columns:repeat(auto-fill,minmax(225px,1fr))}
+  .detail__name{font-size:26px}
+  .bar__in{max-width:980px}
 }
 @media (min-width:1320px){
   .page{max-width:1180px}
   .items{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+  .bar__in{max-width:1180px}
 }
 </style>
 </head>
@@ -189,6 +229,12 @@ a{color:inherit;text-decoration:none}
 <main class="page">
   <div id="app"></div>
 </main>
+
+<div class="bar">
+  <div class="bar__in">
+    <button class="btn btn--wx" type="button" id="wxBtn">加店员微信 · 在线问价</button>
+  </div>
+</div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -206,32 +252,74 @@ var STORE = {
   addrFull: '秦皇岛市海港区 彩龙建材城 AF1-156',
   phone: '13133565318',
   phoneShow: '131 3356 5318',
+  wechat: '13133565318',
+  wechatNote: '微信同号',
   hours: '每天 8:00 – 18:00'
 };
 
 var CATS = [
   { id: 'all', name: '全部', label: '' },
-  { id: 'toilet', name: '座便器', label: 'Toilet' },
-  { id: 'squat', name: '蹲便器', label: 'Squat' },
-  { id: 'urinal', name: '小便器', label: 'Urinal' },
-  { id: 'basin', name: '洗手盆', label: 'Basin' },
-  { id: 'mop', name: '拖布池', label: 'Mop' },
-  { id: 'faucet', name: '五金配件', label: 'Fittings' }
+  { id: 'smart', name: '智能马桶', label: 'Smart' },
+  { id: 'ceramic', name: '陶瓷马桶', label: 'Ceramic' },
+  { id: 'heater', name: '热水器', label: 'Water heater' },
+  { id: 'water', name: '净水', label: 'Filter' },
+  { id: 'hood', name: '烟灶', label: 'Hood' }
 ];
 
 var PRODUCTS = [
-  { id: 'p1', cat: 'toilet', name: '座便器', model: 'LD77210', brand: '申鹭达', price: '', unit: '套',
-    tags: ['成人款','下排水','节水'], img: 'toilet.jpg', note: '' },
-  { id: 'p2', cat: 'squat', name: '蹲便器', model: '', brand: '佳陶', price: '', unit: '套',
-    tags: ['成人款','配暗装延时开关'], img: 'squat.jpg', note: '图为暗装延时冲水阀，仅供参考' },
-  { id: 'p3', cat: 'urinal', name: '小便器', model: '', brand: '佳陶', price: '', unit: '套',
-    tags: ['壁挂式','感应冲水'], img: 'urinal.jpg', note: '' },
-  { id: 'p4', cat: 'basin', name: '台下盆', model: '', brand: '佳陶', price: '', unit: '个',
-    tags: ['台下盆','椭圆'], img: 'basin.jpg', note: '' },
-  { id: 'p5', cat: 'mop', name: '墩布池', model: '', brand: '佳陶', price: '', unit: '套',
-    tags: ['含加长龙头','含下水'], img: 'mop.jpg', note: '' },
-  { id: 'p6', cat: 'faucet', name: '墙壁水嘴', model: '', brand: '佳陶', price: '', unit: '套',
-    tags: ['入墙式','单冷'], img: '', note: '' }
+  { id: 'xa26', cat: 'smart', name: 'XA26 智能马桶', model: 'XA26', brand: '海尔', price: '', unit: '台',
+    tags: ['零压静冲','强洗助便','脚感冲水'], img: 'xa26.jpg', note: '3倍大冲力 · 水包水静音仓 · 暖风烘干' },
+  { id: 'xa28pro', cat: 'smart', name: 'XA28Pro 智能马桶', model: 'XA28Pro', brand: '海尔', price: '', unit: '台',
+    tags: ['泡沫盾','脚感翻盖','四季温感'], img: 'xa28pro.jpg', note: '旋冲泡沫盾 · 无棱陶瓷' },
+  { id: 'ht16', cat: 'smart', name: 'HT16 轻智能马桶', model: 'HT16', brand: '海尔', price: '', unit: '台',
+    tags: ['零压劲冲','脚踢冲水','座圈加热'], img: 'ht16.jpg', note: '离座冲刷 · 柔和夜灯 · 1级水效' },
+  { id: 'tianyue', cat: 'smart', name: '天悦 扶手马桶', model: '天悦', brand: '海尔', price: '', unit: '台',
+    tags: ['扶手助便','AI雷达感应','防电墙'], img: 'tianyue.jpg', note: '适老款，家里有老人优先看这款', fit: 'contain' },
+
+  { id: 'ty063', cat: 'ceramic', name: 'TY063/64 陶瓷马桶', model: 'VH-TY063/64', brand: '海尔', price: '', unit: '台',
+    tags: ['无棱冲刷','安全防冻','一级节水'], img: 'ty063.jpg', note: '' },
+  { id: 'ty073', cat: 'ceramic', name: 'TY073/74 陶瓷马桶', model: 'VH-TY073/74', brand: '海尔', price: '', unit: '台',
+    tags: ['海旋劲冲','两孔旋冲','防冻裂'], img: 'ty073.jpg', note: '' },
+  { id: 'ty053', cat: 'ceramic', name: 'TY053/54 陶瓷马桶', model: 'VH-TY053/54', brand: '海尔', price: '', unit: '台',
+    tags: ['3寸快排','两孔旋冲','一级节水'], img: 'ty053.jpg', note: '' },
+  { id: 'ty023', cat: 'ceramic', name: 'TY023/24 陶瓷马桶', model: 'VH-TY023/24', brand: '海尔', price: '', unit: '台',
+    tags: ['两孔旋冲','流线设计','一级节水'], img: 'ty023.jpg', note: '' },
+  { id: 'ty024', cat: 'ceramic', name: 'TY024 陶瓷马桶', model: 'YH-TY024', brand: '海尔', price: '', unit: '台',
+    tags: ['肤感座圈','一级水效','强力排污'], img: 'ty024.jpg', note: '', fit: 'contain' },
+  { id: 'jm1', cat: 'ceramic', name: '九牧 陶瓷马桶', model: '', brand: '九牧', price: '', unit: '台',
+    tags: ['双旋暴风冲刷','无棱内壁','抗菌陶瓷'], img: 'jomoo.jpg', note: '', fit: 'contain' },
+
+  { id: 'he1', cat: 'heater', name: '电热水器 超一级能效', model: 'JLZM', brand: '海尔', price: '', unit: '台',
+    tags: ['超一级能效','2200W','专利防电墙'], img: 'heater-elec.jpg', note: '钼金加热管 · 109小时保温 · AI省电40%' },
+  { id: 'he2', cat: 'heater', name: '燃气热水器 16升', model: 'JSQ31', brand: '海尔', price: '', unit: '台',
+    tags: ['下置风机','变频恒温','低水压启动'], img: 'heater-gas.jpg', note: '34cm 小尺寸 · 玻璃面板 · 手机远程控制', fit: 'contain' },
+
+  { id: 'wt1', cat: 'water', name: '前置过滤器 XFAS66', model: 'HQZ50-XFAS66', brand: '海尔', price: '', unit: '台',
+    tags: ['双盾强滤','大通量','自动冲洗'], img: 'filter.jpg', note: '' },
+
+  { id: 'r1', cat: 'hood', name: '烟灶 83K12S + 57B1K', model: '83K12S / 57B1K', brand: '老板', price: '', unit: '套',
+    tags: ['26m³大风量','1000Pa静压','5.0kW猛火'], img: 'robam-83k.jpg', note: '', fit: 'contain' },
+  { id: 'r2', cat: 'hood', name: '烟灶 62A6KS + 57B1K', model: '62A6KS / 57B1K', brand: '老板', price: '', unit: '套',
+    tags: ['24m³吸力','900Pa静压','挥手智控'], img: 'robam-62a.jpg', note: '', fit: 'contain' },
+  { id: 'r3', cat: 'hood', name: '烟灶 66D5-E2 + 55B7A-D2', model: '66D5-E2 / 55B7A-D2', brand: '', price: '', unit: '套',
+    tags: ['5.2kW聚能灶','70%一级能效'], img: 'stove-66d5.jpg', note: '', fit: 'contain' },
+  { id: 'r4', cat: 'hood', name: '老板 80K0S + 7B2K0', model: '80K0S / 7B2K0', brand: '老板', price: '', unit: '套',
+    tags: ['24m³大风量','1000Pa静压','5.0kW火力'], img: 'robam-80k.jpg', note: '', fit: 'contain' },
+  { id: 'r5', cat: 'hood', name: '老板 66X1-E1 + 57B2D', model: '66X1-E1 / 57B2D', brand: '老板', price: '', unit: '套',
+    tags: ['28m³超大吸力','1450Pa静压','5.2kW猛火'], img: 'robam-66x1.jpg', note: '', fit: 'contain' },
+
+  { id: 'r6', cat: 'hood', name: '海尔 顶吸烟机 E900T23', model: 'CXW-219-E900T23', brand: '海尔', price: '', unit: '台',
+    tags: ['21.5m³/min','420Pa静压','895宽'], img: 'haier-hood-e900.jpg', note: '', fit: 'contain' },
+  { id: 'r7', cat: 'hood', name: '海尔 燃气灶 QE5B0', model: 'JZT-QE5B0', brand: '海尔', price: '', unit: '台',
+    tags: ['4.5kW×2','天然气','730×420'], img: 'haier-stove-qe5b0.jpg', note: '', fit: 'contain' },
+  { id: 'r8', cat: 'hood', name: '烟灶 S66 + 122D', model: 'S66 / 122D', brand: '', price: '', unit: '套',
+    tags: ['28立方大吸力','3.0冲浪自动洗','5.2kW'], img: 'hood-s66.jpg', note: '', fit: 'contain' },
+
+  { id: 'he3', cat: 'heater', name: '燃气热水器 16升 恒温', model: 'JSQ31-16FXDU1', brand: '海尔', price: '', unit: '台',
+    tags: ['16L','31kW','二级能效'], img: 'heater-16fxdu.jpg', note: '', fit: 'contain' },
+
+  { id: 'wt2', cat: 'water', name: '前置过滤器 大通量', model: '', brand: '海尔', price: '', unit: '台',
+    tags: ['15T/h大通量','智能自动冲洗','3年质保'], img: 'filter-15t.jpg', note: '', fit: 'contain' }
 ];
 
 /* ================= 以下不用改 ================= */
@@ -248,6 +336,9 @@ function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
   });
+}
+function inquiryText(p) {
+  return '你好，想问下这款：' + p.name + (p.model ? '（型号 ' + p.model + '）' : '') + '，现在什么价？';
 }
 function money(p) {
   if (!p) return '到店询价';
@@ -290,12 +381,12 @@ function railHTML(active) {
 
 function itemHTML(p) {
   var img = p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy">' : ICON;
+  var sub = [p.model, p.brand].filter(Boolean).join(' · ');
   return '<a class="item" href="#/item/' + p.id + '">' +
-    '<div class="item__img">' + img + '</div>' +
+    '<div class="item__img' + (p.fit === 'contain' ? ' item__img--fit' : '') + '">' + img + '</div>' +
     '<div class="item__b">' +
       '<p class="item__name">' + esc(p.name) + '</p>' +
-      '<p class="item__model">' + (p.model ? esc(p.model) + ' · ' : '') + esc(p.brand) + '</p>' +
-      '<p class="item__price">' + money(p.price) + (p.unit ? '<small>/' + esc(p.unit) + '</small>' : '') + '</p>' +
+      (sub ? '<p class="item__model">' + esc(sub) + '</p>' : '') +
       '<div class="item__tags">' + p.tags.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
     '</div>' +
   '</a>';
@@ -309,7 +400,7 @@ function listView(catId) {
       '<span class="cnt2">' + list.length + ' 件 · 实物在店</span></div>' +
     '<div style="height:16px"></div>' +
     '<div class="items' + (list.length === 1 ? ' items--single' : '') + '">' + list.map(itemHTML).join('') + '</div>' +
-    '<p class="hint" style="text-align:center;margin-top:26px">价格以到店为准 · 大批量可谈工程价</p>' +
+    '<p class="hint" style="text-align:center;margin-top:26px">实物都在店里，欢迎到店看</p>' +
   '</div>';
   return headHTML() + '<div class="shell">' + railHTML(catId) + pane + '</div>' +
     '<p class="foot">' + esc(STORE.addrFull) + '<br>' + esc(STORE.phoneShow) + '</p>';
@@ -347,16 +438,15 @@ function detailView(id) {
 
   return '<div class="topbar"><a class="back" href="#/' + p.cat + '"><i>‹</i>' + esc(catName(p.cat)) + '</a></div>' +
     '<div class="detail">' +
-      '<div class="detail__img">' + img + '</div>' +
+      '<div class="detail__img' + (p.fit === 'contain' ? ' detail__img--fit' : '') + '">' + img + '</div>' +
       '<div class="detail__b">' +
         '<h1 class="detail__name">' + esc(p.name) + '</h1>' +
-        '<p class="detail__model">' + (p.model ? 'MODEL ' + esc(p.model) + ' · ' : '') + esc(p.brand) + '</p>' +
-        '<p class="detail__price">' + money(p.price) + '</p>' +
-        '<p class="detail__note">' + (p.price ? '每' + esc(p.unit || '套') + ' · ' : '') + '价格以到店为准' + (p.note ? ' · ' + esc(p.note) : '') + '</p>' +
+        '<p class="detail__model">' + ([p.model ? 'MODEL ' + esc(p.model) : '', p.brand].filter(Boolean).join(' · ')) + '</p>' +
+        (p.note ? '<p class="detail__note">' + esc(p.note) + '</p>' : '<p class="detail__note">实物在店，欢迎来看</p>') +
         '<ul class="specs">' + p.tags.map(function (t) {
           return '<li><span class="chk">—</span><span>' + esc(t) + '</span></li>';
         }).join('') + '</ul>' +
-        '<button class="btn" type="button" data-copy="' + esc(STORE.phone) + '" data-msg="号码已复制，去微信搜索添加">复制号码 · 加微信问</button>' +
+        '<button class="btn btn--wx" type="button" data-copy="' + esc(inquiryText(p)) + '" data-msg="已复制，加微信 ' + esc(STORE.wechat) + ' 发给我">问这款</button>' +
         '<div style="height:10px"></div>' +
         '<a class="btn btn--line" href="#/' + p.cat + '">看看别的' + esc(catName(p.cat)) + '</a>' +
       '</div>' +
@@ -433,6 +523,18 @@ function bindCopy() {
       copy(this.getAttribute('data-copy'), this.getAttribute('data-msg') || '已复制');
     };
   }
+}
+
+/* ---------- 微信问价按钮 ---------- */
+var wxBtn = document.getElementById('wxBtn');
+if (wxBtn) {
+  wxBtn.addEventListener('click', function () {
+    if (!STORE.wechat) {
+      toast('微信号还没定，先打 ' + STORE.phoneShow);
+      return;
+    }
+    copy(STORE.wechat, '微信号已复制，打开微信搜索添加');
+  });
 }
 
 window.addEventListener('hashchange', render);
